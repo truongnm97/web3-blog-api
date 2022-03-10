@@ -1,4 +1,4 @@
-specVersion: 0.0.1
+specVersion: 0.0.2
 schema:
   file: ./schema.graphql
 dataSources:
@@ -6,15 +6,15 @@ dataSources:
     name: Blog
     network: mumbai
     source:
-      address: "0xADEDE9B942EFC056Ea9debD85f1183FC5F3A3D2F"
+      address: '0xADEDE9B942EFC056Ea9debD85f1183FC5F3A3D2F'
       abi: Blog
+      startBlock: 25450227
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - PostCreated
-        - PostUpdated
+        - Post
       abis:
         - name: Blog
           file: ./abis/Blog.json
